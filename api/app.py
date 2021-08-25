@@ -14,12 +14,13 @@ from tensorflow.keras.models import load_model
 
 
 #Flask and Utils Import
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, jsonify
 from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 import os
 import shutil
 import base64
+import json
 
 
 
@@ -86,7 +87,7 @@ def model_predict(img_path, model):
 @app.route('/predict', methods=['POST'])
 @cross_origin()
 def region():
-
+    data = json.load(open('data.json','r'))
     #Make temporary directory for uploads
     TEMP_DIR = "images/"
     shutil.rmtree(TEMP_DIR, ignore_errors=True)
@@ -105,6 +106,6 @@ def region():
 
     # Make prediction
     preds = model_predict(file_path, model)
-    return classes[preds[0]]
+    return jsonify(data[classes[preds[0]]])
 
 app.run(host='0.0.0.0', port=8081)

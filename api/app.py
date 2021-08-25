@@ -22,6 +22,7 @@ import shutil
 import base64
 
 
+
 app = Flask(__name__)
 
 cors = CORS(app)
@@ -92,7 +93,8 @@ def region():
     if not os.path.exists(TEMP_DIR):
         os.makedirs(TEMP_DIR)
 
-    base = request.data
+    base = bytes(request.json["image"],'utf-8')
+    print(base)
     base = base64.decodebytes(base)
     # Making temporary directory
     basepath = os.path.dirname(__file__)

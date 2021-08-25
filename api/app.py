@@ -1,12 +1,4 @@
-#Interactive Session
-# from tensorflow.compat.v1 import ConfigProto
-# from tensorflow.compat.v1 import InteractiveSession
-# config = ConfigProto()
-# config.gpu_options.per_process_gpu_memory_fraction = 0.2
-# config.gpu_options.allow_growth = True
-# session = InteractiveSession(config=config)
-
-# import the libraries as shown below
+#Tensorflow libraries
 import tensorflow as tf
 from tensorflow.keras.layers import Input, Lambda, Dense, Flatten
 from tensorflow.keras.models import Model
@@ -27,6 +19,7 @@ from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 import os
 import shutil
+import base64
 
 
 app = Flask(__name__)
@@ -99,12 +92,14 @@ def region():
     if not os.path.exists(TEMP_DIR):
         os.makedirs(TEMP_DIR)
 
-    imagefile = request.files['file']
+    base = request.data
+    base = base64.decodebytes(base)
     # Making temporary directory
     basepath = os.path.dirname(__file__)
     file_path = os.path.join(
-        basepath, 'images', secure_filename(imagefile.filename))
-    imagefile.save(file_path)
+        basepath,'image.jpg')
+    with open('image.jpg','wb') as f:
+        f.write(base)
 
     # Make prediction
     preds = model_predict(file_path, model)

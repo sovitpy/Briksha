@@ -88,14 +88,7 @@ def model_predict(img_path, model):
 @cross_origin()
 def region():
     data = json.load(open('data.json','r'))
-    #Make temporary directory for uploads
-    TEMP_DIR = "images/"
-    shutil.rmtree(TEMP_DIR, ignore_errors=True)
-    if not os.path.exists(TEMP_DIR):
-        os.makedirs(TEMP_DIR)
-
     base = bytes(request.json["image"],'utf-8')
-    print(base)
     base = base64.decodebytes(base)
     # Making temporary directory
     basepath = os.path.dirname(__file__)

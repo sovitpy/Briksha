@@ -101,6 +101,6 @@ def region():
     preds = model_predict(file_path, model)
     resp = jsonify(data[classes[preds[0]]])
     print(data[classes[preds[0]]])
-    return resp
+    return classes[preds[0]]
 
 app.run(host='0.0.0.0', port=8081)

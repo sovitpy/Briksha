@@ -11,9 +11,10 @@
 
 ## Description
 
+
 “Briksha,” as a part of i-Fit Challenge, is an app designed for the facilitation of farmers (especially in Nepal) who suffer from annual losses due to the disease that infects their crops. Using our app, farmers can easily detect the disease that has damaged the crops just by clicking a picture, and implement the possible remedy to the problems as directed in the app. Currently, Briksha can detect different types of disease that have infected apples, strawberries, grapes, corn, tomato, potato- the most common crops cultivated in Nepal.
 
-https://youtu.be/pgY6DQnHH0E
+https://user-images.githubusercontent.com/53575561/131122198-5d0effb6-837a-4795-9f77-f047b58da05a.mp4
 
 ## App
 

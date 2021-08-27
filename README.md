@@ -27,13 +27,13 @@ git clone https://github.com/sovitpy/Briksha.git
 ```
 ### Build and run apk
 ```dart
-cd app
+cd App
 flutter pub get
 flutter run
 ```
 ### Test API
 ```python
-cd api
+cd API
 python3 app.py
 ```
 ## Tech Stack Used

@@ -57,7 +57,7 @@ Usage is provided under the [MIT License](http://http//opensource.org/licenses/m
 
 
 ## Contributors
-Sovit Lekhak- Backend Development
-Roman Shrestha- Backend Development
-Johnson Subedi- Backend Development
-Pranjal Chalise- Frontend Development
+- Sovit Lekhak- Backend Development
+- Roman Shrestha- Backend Development
+- Johnson Subedi- Backend Development
+- Pranjal Chalise- Frontend Development

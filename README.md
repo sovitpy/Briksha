@@ -54,3 +54,10 @@ Contributions are always welcome. See [contribution guidelines](https://github.c
 
 ## License
 Usage is provided under the [MIT License](http://http//opensource.org/licenses/mit-license.php). See LICENSE for the full details.
+
+
+## Contributors
+Sovit Lekhak- Backend Development
+Roman Shrestha- Backend Development
+Johnson Subedi- Backend Development
+Pranjal Chalise- Frontend Development
